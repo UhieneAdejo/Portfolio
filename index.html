@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Uhiene — Fullstack Developer</title>
+<title>Uhiene Adejo</title>
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet"/>
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -151,7 +151,7 @@
     transition: color 0.2s, border-color 0.2s;
   }
   .btn-secondary:hover { color: var(--grey-900); border-color: var(--grey-900); }
-
+/* 
   .hero-right {
     background: linear-gradient(to top, rgba(0,0,0,0.5), rgba(0,0,0,0.1)),
               url("profilepic.jpeg") center top/cover no-repeat;
@@ -161,7 +161,21 @@
     padding: 60px;
     position: relative;
     overflow: hidden;
-  }
+  } */
+
+  .hero-right {
+  background-image: url("profilepic.jpeg");
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 60px;
+  position: relative;
+  overflow: hidden;
+  min-height: 100vh;
+}
   .hero-right-image{
     margin-top: 0%;
     height: 50%;
@@ -532,6 +546,141 @@
   }
   .anim { opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; }
   .anim.visible { opacity: 1; transform: translateY(0); }
+
+  /* =========================
+   MOBILE RESPONSIVENESS
+========================= */
+@media (max-width: 768px) {
+
+  nav {
+    padding: 18px 20px;
+    flex-direction: column;
+    gap: 16px;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    gap: 18px;
+    flex-wrap: wrap;
+  }
+
+  .nav-links a {
+    font-size: 0.75rem;
+  }
+
+  /* HERO */
+  .hero {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+
+  .hero-left {
+    padding: 120px 20px 60px;
+  }
+
+  .hero-headline {
+    font-size: 3rem;
+    line-height: 1;
+  }
+
+  .hero-sub {
+    max-width: 100%;
+    font-size: 1rem;
+  }
+
+  .hero-btns {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .hero-right {
+    min-height: 500px;
+    border-radius: 0;
+    background-position: top center;
+    background-size: cover;
+    padding: 20px;
+  }
+
+  .hero-avatar {
+    width: 80px;
+    height: 80px;
+    font-size: 2rem;
+  }
+
+  .hero-stats {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .stat {
+    padding: 18px;
+  }
+
+  .stat-number {
+    font-size: 1.5rem;
+  }
+
+  /* SECTIONS */
+  .services,
+  .projects,
+  .about-strip,
+  .contact {
+    padding: 80px 20px;
+  }
+
+  .section-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  /* SERVICES */
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* PROJECTS */
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-card.featured {
+    grid-column: span 1;
+    grid-template-columns: 1fr;
+  }
+
+  /* ABOUT */
+  .about-strip {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  /* CONTACT */
+  .contact {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  /* FOOTER */
+  footer {
+    flex-direction: column;
+    gap: 18px;
+    text-align: center;
+    padding: 30px 20px;
+  }
+
+  .footer-links {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
 </style>
 </head>
 <body>
@@ -776,14 +925,18 @@
         <div class="contact-icon">💬</div>
         WhatsApp Me
       </a>
-      <a href="https://github.com/uhiene" class="contact-item">
+      <a href="https://github.com/UhieneAdejo" class="contact-item">
         <div class="contact-icon">GH</div>
         github.com/UhieneAdejo
       </a>
-      <a href="https://linkedin.com/in/uhiene" class="contact-item">
+      <!-- <a href="https://linkedin.com/in/uhiene-adejo/" class="contact-item">
         <div class="contact-icon">in</div>
         linkedin.com/in/Uhiene Adejo
-      </a>
+      </a> -->
+      <a href="https://linkedin.com/in/uhiene-adejo-3040a17b/" class="contact-item" target="_blank">
+  <div class="contact-icon">in</div>
+  linkedin.com/in/uhiene-adejo-3040a17b/
+</a>
     </div>
   </div>
   <div>
