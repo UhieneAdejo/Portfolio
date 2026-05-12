@@ -360,24 +360,30 @@
   .project-card:hover { transform: translateY(-4px); box-shadow: 0 20px 60px rgba(0,0,0,0.07); }
   .project-card.featured { grid-column: span 2; display: grid; grid-template-columns: 1fr 1fr; }
   .project-img {
-    background: var(--grey-100);
-    aspect-ratio: 16/9;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 2.5rem;
-    color: var(--grey-300);
-    position: relative;
-    overflow: hidden;
-  }
+  width: 100%;
+  height: 220px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px 12px 0 0;
+}
+
+.project-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
   .project-card.featured .project-img { aspect-ratio: unset; min-height: 260px; }
   .project-img-pattern {
-    position: absolute;
-    inset: 0;
-    background-image: radial-gradient(var(--grey-200) 1px, transparent 1px);
-    background-size: 20px 20px;
-    opacity: 0.5;
-  }
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(var(--grey-200) 1px, transparent 1px);
+  background-size: 20px 20px;
+  opacity: 0.15; /* reduce a LOT */
+  z-index: 1;
+  pointer-events: none;
+}
   .project-body { padding: 28px; }
   .project-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 14px; }
   .tag {
@@ -399,6 +405,9 @@
     font-weight: 300;
     margin-bottom: 20px;
   }
+  .project-card:hover .project-img img {
+  transform: scale(1.05);
+}
   .project-links { display: flex; gap: 16px; }
   .project-link {
     font-size: 0.82rem;
@@ -859,60 +868,44 @@
   </div>
   <div class="projects-grid">
     <div class="project-card featured anim">
-      <div class="project-img">
+
+    <div class="project-img">
         <div class="project-img-pattern"></div>
-        🛍️
-      </div>
-      <div class="project-body">
-      <!--  <div class="project-tags">
-          <span class="tag">React</span>
-          <span class="tag">Node.js</span>
-          <span class="tag">MongoDB</span>
-          <span class="tag">Paystack</span>
-        </div>
-        <!-- <div class="project-name">Abuja Fashion Store</div>
-        <div class="project-desc">A full e-commerce platform for a fashion brand. Features product listings, cart system, Paystack payment integration, and an admin panel for managing orders and inventory in real time.</div>
-        <div class="project-links">
-          <a href="#" class="project-link">↗ View Live</a>
-          <a href="#" class="project-link">⌥ GitHub</a>
-        </div>
-      </div>
+
+        <img src="images/infotexscreenshot.png" alt="Infotex Website Screenshot">
+
     </div>
-    <div class="project-card anim">
-      <div class="project-img">
-        <div class="project-img-pattern"></div>
-        📊
+
+    <div class="project-body">
+
+      <div class="project-tags">
+        <span class="tag">HTML</span>
+        <span class="tag">CSS</span>
+        <span class="tag">JavaScript</span>
+        <span class="tag">NodeJS</span>
+
+        <!-- <span class="tag">Formspree</span> -->
       </div>
-      <div class="project-body">
-        <div class="project-tags">
-          <span class="tag">React</span>
-          <span class="tag">Express</span>
-          <span class="tag">JWT</span>
-        </div>
-        <div class="project-name">Staff Management Portal</div>
-        <div class="project-desc">A role-based internal portal for an SME. Staff and admin have separate dashboards with tailored access and controls.</div>
-        <div class="project-links">
-          <a href="#" class="project-link">↗ View Live</a>
-          <a href="#" class="project-link">⌥ GitHub</a>
-        </div>
+
+      <div class="project-name">Infotex IT Firm Website</div>
+
+      <div class="project-desc">
+        A modern IT company website with responsive design and basic back-end functionality.
       </div>
+
+      <div class="project-links">
+        <a href="https://infotex-it.vercel.app/" target="_blank" class="project-link">
+          ↗ View Live
+        </a>
+
+        <a href="https://github.com/UhieneAdejo/Infotex" target="_blank" class="project-link">
+          ⌥ GitHub
+        </a>
+      </div>
+
     </div>
-    <div class="project-card anim">
-      <div class="project-img">
-        <div class="project-img-pattern"></div>
-        🌐
-      </div>
-      <div class="project-body">
-        <div class="project-tags">
-          <span class="tag">React</span>
-          <span class="tag">Tailwind</span>
-        </div>
-        <div class="project-name">Law Firm Website</div>
-        <div class="project-desc">A clean, conversion-focused brochure site for an Abuja law practice. Mobile-first design with contact and consultation booking.</div>
-        <div class="project-links">
-          <a href="#" class="project-link">↗ View Live</a>
-          <a href="#" class="project-link">⌥ GitHub</a>
-        </div> -->
+
+  </div>
       </div>
     </div>
   </div>
